@@ -37,4 +37,13 @@ Animateurs : Cédric Midoux, Valentin Loux et Maxime Manno
 
 ### Nextflow :
 
+#### liens Nextflow :
+
+* [Get started](https://www.nextflow.io/docs/latest/getstarted.html)
+* [Pipeline NF-Core](https://nf-co.re/pipelines)
+
+#### Template et exemples :
+
 [Template de Pipeline (stats basiques) sous Slurm](nf-basic_stats/README.md)
+
+
