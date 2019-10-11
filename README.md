@@ -32,3 +32,9 @@ Animateurs : Cédric Midoux, Valentin Loux et Maxime Manno
 * Configuration :
   * [VM](Configuration.md)
   * [Conda](https://forgemia.inra.fr/mmanno/HackathonOct2019-Atelier1/blob/master/Configuration.md#install-conda-env-)
+
+## Pipelines :
+
+### Nextflow :
+
+Template de Pipeline (stats basiques) sous Slurm
