@@ -1,3 +1,3 @@
-Gandalf	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny1a-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny1b-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny1c-example.fastq
-Frodo	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny2a-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny2b-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny2c-example.fastq
-Bombadil	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny3a-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny3b-example.fastq	/work/mmanno/my_nextflow/test_nextflow/input_files/tiny3c-example.fastq
+Gandalf	input_files/tiny1a-example.fastq	input_files/tiny1b-example.fastq	input_files/tiny1c-example.fastq
+Frodo	input_files/tiny2a-example.fastq	input_files/tiny2b-example.fastq	input_files/tiny2c-example.fastq
+Bombadil	input_files/tiny3a-example.fastq	input_files/tiny3b-example.fastq	input_files/tiny3c-example.fastq
