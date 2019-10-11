@@ -29,4 +29,6 @@ Animateurs : Cédric Midoux, Valentin Loux et Maxime Manno
 
 * Lien : [Filesender](https://filesender.renater.fr/?s=download&token=65908ef2-5c6b-0e57-a538-7e786fe2296a)
 
-
+* Configuration :
+  * [VM](Configuration.md)
+  * [Conda](https://forgemia.inra.fr/mmanno/HackathonOct2019-Atelier1/blob/master/Configuration.md#install-conda-env-)
