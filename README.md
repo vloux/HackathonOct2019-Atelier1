@@ -44,6 +44,6 @@ Animateurs : Cédric Midoux, Valentin Loux et Maxime Manno
 
 #### Template et exemples :
 
-[Template de Pipeline (stats basiques) sous Slurm](nf-basic_stats/README.md)
+[Template de Pipeline (stats basiques) sous Slurm](nf-basic_stats)
 
 
