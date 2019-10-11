@@ -37,4 +37,4 @@ Animateurs : Cédric Midoux, Valentin Loux et Maxime Manno
 
 ### Nextflow :
 
-Template de Pipeline (stats basiques) sous Slurm
+[Template de Pipeline (stats basiques) sous Slurm](nf-basic_stats/README.md)
