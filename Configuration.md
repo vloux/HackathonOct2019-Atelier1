@@ -5,7 +5,7 @@
 
 [Download](https://www.virtualbox.org/wiki/Downloads)
 
-Fichier > importer un appareil virtuel > [hackathon_atelier1_V2.ova](https://filesender.renater.fr/?s=download&token=65908ef2-5c6b-0e57-a538-7e786fe2296a)  
+Fichier > importer un appareil virtuel > hackathon_atelier1_V2.ova
 changer nom, proc et mémoire si besoin
 
 Configuration > Interface utilisateur > cocher la case en haut à droite (_Déjà configuré_ :+1:)
