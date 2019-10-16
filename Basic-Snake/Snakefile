@@ -1,0 +1,19 @@
+# Title : Basic snakefile
+# Authors : 
+# Date : 2019-10-16 
+
+SAMPLES=['sample1', 'sample2']
+READS=['R1', 'R2']
+
+rule all:
+	input:
+		expand("out/{sample}.{reads}_fastqc.html", sample=SAMPLES, reads=READS)
+
+rule fastQC:
+	input:
+		"/home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/{sample}.{reads}.fastq.gz"
+	output:
+		"out/{sample}.{reads}_fastqc.html"
+	shell:
+		"fastqc -o out/ {input}"
+

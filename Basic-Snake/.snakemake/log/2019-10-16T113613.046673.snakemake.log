@@ -1,0 +1,53 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	4	fastQC
+	5
+
+rule fastQC:
+    input: /home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/sample1.R2.fastq.gz
+    output: out/sample1.R2_fastqc.html
+    jobid: 3
+    wildcards: sample=sample1, reads=R2
+
+
+rule fastQC:
+    input: /home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/sample2.R1.fastq.gz
+    output: out/sample2.R1_fastqc.html
+    jobid: 2
+    wildcards: sample=sample2, reads=R1
+
+
+rule fastQC:
+    input: /home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/sample1.R1.fastq.gz
+    output: out/sample1.R1_fastqc.html
+    jobid: 4
+    wildcards: sample=sample1, reads=R1
+
+
+rule fastQC:
+    input: /home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/sample2.R2.fastq.gz
+    output: out/sample2.R2_fastqc.html
+    jobid: 1
+    wildcards: sample=sample2, reads=R2
+
+Finished job 4.
+1 of 5 steps (20%) done
+Finished job 1.
+2 of 5 steps (40%) done
+Finished job 3.
+3 of 5 steps (60%) done
+Finished job 2.
+4 of 5 steps (80%) done
+
+localrule all:
+    input: out/sample1.R1_fastqc.html, out/sample1.R2_fastqc.html, out/sample2.R1_fastqc.html, out/sample2.R2_fastqc.html
+    jobid: 0
+
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: /home/mbranger/Bureau/2019-10_Hackathon/HackathonOct2019-Atelier1/Basic-Snake/.snakemake/log/2019-10-16T113613.046673.snakemake.log
