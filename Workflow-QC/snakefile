@@ -1,0 +1,39 @@
+# Title : Training snakefile
+# Date : 2019-10-16
+# Authors : Branger, Duvaux, Kempf, Loux
+
+rule all:
+	input:
+		""
+
+rule FastQC:
+	input:
+		""
+	output:
+		""
+	shell:
+		""
+
+rule FastP:
+	input:
+		""
+	output:
+		""
+	shell:
+		""
+
+rule FastQCPost:
+	input:
+		""
+	output:
+		""
+	shell:
+		""
+
+rule MultiQC:
+	input:
+		""
+	output:
+		""
+	shell:
+		""
