@@ -1,5 +1,5 @@
 Basic-Snake/out
 Basic-Snake/.snakemake
-*/.snakemake
-.snakemake
+*/.snakemake/
+.snakemake/
 tmp

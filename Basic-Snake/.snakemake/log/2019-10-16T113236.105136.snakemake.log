@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 12 of /home/mbranger/Bureau/2019-10_Hackathon/HackathonOct2019-Atelier1/Basic-Snake/Snakefile:
-Missing input files for rule fastQC:
-/home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/sample1.R1

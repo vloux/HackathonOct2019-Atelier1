@@ -4,16 +4,47 @@
 
 SAMPLES=['sample1', 'sample2']
 READS=['R1', 'R2']
+DATA="../data/"
 
 rule all:
 	input:
-		expand("out/{sample}.{reads}_fastqc.html", sample=SAMPLES, reads=READS)
+#		expand("out/{sample}.{reads}_fastqc.html", sample=SAMPLES, reads=READS),
+#		expand("out/{sample}.{reads}.trimmed.fastq.gz", sample=SAMPLES, reads=READS),
+		"out/multiqc_report.html"
+
+rule multiQC:
+	input: 
+		FASTP=expand("out/{sample}.fastp.json",sample=SAMPLES),
+		FASTQC=expand("out/{sample}.{reads}_fastqc.zip",sample=SAMPLES,reads=READS)
+	output:
+		html="out/multiqc_report.html"
+	shell:
+		"multiqc {input.FASTP} {input.FASTQC} -o out"
+rule fastP:
+	input:
+		R1=DATA+"/{sample}.R1.fastq.gz",
+		R2=DATA+"/{sample}.R2.fastq.gz"
+	output:
+		R1="out/{sample}.R1.trimmed.fastq.gz",
+		R2="out/{sample}.R2.trimmed.fastq.gz",
+		HTML="out/{sample}.fastp.html",
+		JSON="out/{sample}.fastp.json"
+	threads: 2 
+	shell:
+		"fastp -i {input.R1} -I {input.R2} -z 4 -o {output.R1}  -O {output.R2} -h {output.HTML} -j {output.JSON} "
+#fastp -i ../data/sample1.R1.fastq.gz -I ../data/sample1.R2.fastq.gz -z 4 -o sample1.R1.trimmed.fastq.gz  -O sample1.R2.trimmed.fastq.gz
+
 
 rule fastQC:
 	input:
-		"/home/mbranger/Bureau/2019-10_Hackathon/snakemake/data/{sample}.{reads}.fastq.gz"
+		DATA+"/{sample}.{reads}.fastq.gz"
 	output:
-		"out/{sample}.{reads}_fastqc.html"
+		HTML="out/{sample}.{reads}_fastqc.html",
+		ZIP="out/{sample}.{reads}_fastqc.zip"
+		
+	threads: 2 
 	shell:
-		"fastqc -o out/ {input}"
+		"fastqc -t {threads} -o out/ {input}"
+
+
 
