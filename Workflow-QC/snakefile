@@ -1,20 +1,15 @@
 # Title : Training snakefile
 # Date : 2019-10-16
-# Authors : Branger, Duvaux, Kempf, Loux
+# Authors : Branger M., Duvaux L., Kempf F., Loux V.
+
+SAMPLES=['sample1', 'sample2']
+READS=['R1', 'R2']
 
 rule all:
 	input:
 		""
 
-rule FastQC:
-	input:
-		""
-	output:
-		""
-	shell:
-		""
-
-rule FastP:
+rule MultiQC:
 	input:
 		""
 	output:
@@ -30,9 +25,17 @@ rule FastQCPost:
 	shell:
 		""
 
-rule MultiQC:
+rule FastP:
 	input:
 		""
+	output:
+		""
+	shell:
+		""
+
+rule FastQC:
+	input:
+		"/home/mbranger/Bureau/2019-10-Hackathon/snakemake/data/{sample}.{reads}.fastq.gz, sample=SAMPLES, reads=READS"
 	output:
 		""
 	shell:
